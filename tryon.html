@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Try-On — Eyevision Optical Clinic</title>
+  <meta name="description" content="Virtual try-on for eyeglass frames using webcam or a photo upload.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Eyevision Optical Clinic home">
+        <span class="brand-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M2.2 12s3.6-7 9.8-7 9.8 7 9.8 7-3.6 7-9.8 7S2.2 12 2.2 12Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+            <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+          </svg>
+        </span>
+        <span>Eyevision Optical Clinic</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-links" data-nav-menu>
+        <a class="nav-link" data-nav href="index.html">Home</a>
+        <a class="nav-link" data-nav href="simulator.html">Simulator</a>
+        <a class="nav-link" data-nav href="tryon.html">Try-On</a>
+        <a class="nav-link" data-nav href="journey.html">Vision Journey</a>
+        <a class="nav-link" data-nav href="community.html">Community</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="simulator.html">Try Simulator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <div class="crumb">Tools / Try-On</div>
+        <h1>Virtual Try‑On</h1>
+        <p>Use your webcam or upload a photo, then pick a frame style. Adjust size and position for a realistic placement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container tryon-grid">
+        <div class="stage">
+          <div class="stage-top">
+            <div class="stage-title">Try‑On Stage</div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+              <button class="btn btn-primary btn-sm" type="button" data-tryon-webcam>Use Webcam</button>
+              <button class="btn btn-outline btn-sm" type="button" data-tryon-stop>Stop</button>
+              <label class="btn btn-outline btn-sm" style="cursor:pointer;">
+                Upload Photo
+                <input class="sr-only" data-tryon-file type="file" accept="image/*">
+              </label>
+            </div>
+          </div>
+
+          <div class="stage-view" data-tryon-stage>
+            <div class="stage-empty" data-tryon-empty>
+              <div>
+                <strong>Start with a webcam or photo</strong>
+                <span>
+                  Click <b>Use Webcam</b> (browser will ask permission) or <b>Upload Photo</b> to begin.
+                  Then select a frame style on the right.
+                </span>
+              </div>
+            </div>
+
+            <video data-tryon-video playsinline muted></video>
+            <img data-tryon-img alt="Uploaded photo for try-on" />
+            <canvas data-tryon-canvas></canvas>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3 style="margin:0 0 8px;">Frame controls</h3>
+            <p style="margin:0; color:var(--muted); line-height:1.6; font-size:14px;">
+              Adjust fit for your face. (This is a visual demo; in‑clinic fitting is always best.)
+            </p>
+
+            <div style="margin-top:14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+                <label for="sizeRange" style="font-weight:900; font-size:13px;">Frame size</label>
+                <span class="pill"><span data-tryon-size-out>78%</span></span>
+              </div>
+              <input id="sizeRange" data-tryon-size type="range" min="55" max="95" value="78">
+            </div>
+
+            <div style="margin-top:12px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+                <label for="posYRange" style="font-weight:900; font-size:13px;">Vertical position</label>
+                <span class="pill"><span data-tryon-posy-out>44%</span></span>
+              </div>
+              <input id="posYRange" data-tryon-posy type="range" min="30" max="60" value="44">
+              <p class="hint" style="margin:10px 0 0;">
+                Tip: align the bridge of the frame with the top of your nose.
+              </p>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:16px;">
+            <h3 style="margin:0 0 10px;">Choose a frame</h3>
+            <div class="thumbs" data-tryon-thumbs>
+              <!-- injected by script.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="gap:10px;">
+          <span class="brand-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M2.2 12s3.6-7 9.8-7 9.8 7 9.8 7-3.6 7-9.8 7S2.2 12 2.2 12Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+              <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+            </svg>
+          </span>
+          <span>Eyevision Optical Clinic</span>
+        </div>
+        <div class="footer-note">
+          Contact: 0947 807 5978 • Eyevisionopticalclinic@gmail.com<br>
+          Address: One Way Zulueta Street, Koronadal City<br>
+          Hours: Mon–Sat, 8:30 AM – 5:00 PM
+        </div>
+      </div>
+      <div class="footer-links">
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 7h10v10H7V7Z" stroke="#F97316" stroke-width="2"/>
+            <path d="M4 10V4h6" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Book an Exam
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 12s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6Z" stroke="#F97316" stroke-width="2"/>
+            <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="#F97316" stroke-width="2"/>
+          </svg>
+          Vision First
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
