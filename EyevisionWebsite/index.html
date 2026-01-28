@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyevision Optical Clinic — What you see matters</title>
+    <meta name="description" content="Eyevision Optical Clinic — modern eye care, vision simulator, and virtual try-on for frames. What you see matters.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Eyevision Optical Clinic home">
+                <span class="brand-badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M2.2 12s3.6-7 9.8-7 9.8 7 9.8 7-3.6 7-9.8 7S2.2 12 2.2 12Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+                        <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+                    </svg>
+                </span>
+                <span>Eyevision Optical Clinic</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <nav class="nav-links" data-nav-menu>
+                <a class="nav-link" data-nav href="index.html">Home</a>
+                <a class="nav-link" data-nav href="simulator.html">Simulator</a>
+                <a class="nav-link" data-nav href="tryon.html">Try-On</a>
+                <a class="nav-link" data-nav href="journey.html">Vision Journey</a>
+                <a class="nav-link" data-nav href="community.html">Community</a>
+                <a class="btn btn-primary btn-sm nav-cta" href="tryon.html">Explore Frames</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bubbles" aria-hidden="true"></div>
+            <div class="hero-wave" aria-hidden="true"></div>
+
+            <div class="container hero-grid">
+                <div>
+                    <div class="kicker">Modern eye care • Friendly team</div>
+                    <h1>Eyevision Optical Clinic</h1>
+                    <p class="motto">What you see matters</p>
+                    <p>
+                        Professional eye exams, accurate prescriptions, and curated frames—paired with a vision simulator and a virtual try-on experience you can use from home.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="simulator.html">Try Vision Simulator</a>
+                        <a class="btn btn-outline" href="tryon.html">Explore Frames</a>
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-label="Illustration">
+                    <div class="art-inner">
+                        <img
+                            alt="Eye and glasses illustration"
+                            src="images\eyeglass.jpg"
+                            loading="lazy"
+                        >
+                        <p class="hint" style="margin:12px 0 0;">
+                            Clear vision starts with the right care—then the right frame.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Everything you need for confident vision</h2>
+                <p class="section-subtitle">Explore tools, guidance, and community-focused resources—designed with a modern, calm UI.</p>
+
+                <div class="grid cols-4" style="margin-top:18px;">
+                    <a class="card" href="simulator.html">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 12s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6Z" stroke="#F97316" stroke-width="2"/>
+                                <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="#F97316" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Vision Simulator</h3>
+                        <p>Use the slider to simulate blur levels and understand the impact of uncorrected vision.</p>
+                        <div class="meta">Open simulator →</div>
+                    </a>
+
+                    <a class="card" href="tryon.html">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M7 12h10" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M4 12c0-4 3-7 8-7s8 3 8 7-3 7-8 7-8-3-8-7Z" stroke="#F97316" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Virtual Try-On</h3>
+                        <p>Try different frame styles using your webcam or a photo upload—quick and easy.</p>
+                        <div class="meta">Try frames →</div>
+                    </a>
+
+                    <a class="card" href="journey.html">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M6 6h12M6 12h12M6 18h12" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M6 6v12" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Vision Journey</h3>
+                        <p>A simple step-by-step path: exam, prescription, frame selection, and ongoing checkups.</p>
+                        <div class="meta">See the journey →</div>
+                    </a>
+
+                    <a class="card" href="community.html">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M16 11a4 4 0 1 0-8 0" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Community Care</h3>
+                        <p>Resources for kids, adults, and seniors—plus wellness tips for healthier screen time.</p>
+                        <div class="meta">Explore resources →</div>
+                    </a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="num">4,800+</div>
+                        <div class="label">Happy Patients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">6+</div>
+                        <div class="label">Years of Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">350+</div>
+                        <div class="label">Frame Models</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section soft">
+            <div class="container">
+                <h2 class="section-title">Patient stories</h2>
+                <p class="section-subtitle">Optional testimonial section—polished, calm, and consistent with the theme.</p>
+                <div class="grid cols-3" style="margin-top:18px;">
+                    <div class="card">
+                        <h3>“The simulator helped me understand my blur.”</h3>
+                        <p>Quick, clear explanation and a friendly exam. The frame suggestions were spot-on.</p>
+                        <div class="meta">— Alex P.</div>
+                    </div>
+                    <div class="card">
+                        <h3>“Try-on made choosing frames so easy.”</h3>
+                        <p>I could narrow down styles at home before visiting—saved time and felt confident.</p>
+                        <div class="meta">— Mia R.</div>
+                    </div>
+                    <div class="card">
+                        <h3>“Professional, modern, and caring.”</h3>
+                        <p>Great experience from start to finish. Clear explanations and comfortable fit.</p>
+                        <div class="meta">— Jordan S.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="brand" style="gap:10px;">
+                    <span class="brand-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M2.2 12s3.6-7 9.8-7 9.8 7 9.8 7-3.6 7-9.8 7S2.2 12 2.2 12Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+                            <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" stroke="rgba(249,115,22,.95)" stroke-width="2"/>
+                        </svg>
+                    </span>
+                    <span>Eyevision Optical Clinic</span>
+                </div>
+                <div class="footer-note">
+                    Contact: 0947 807 5978 • Eyevisionopticalclinic@gmail.com<br>
+                    Address: One Way Zulueta Street, Koronadal City<br>
+                    Hours: Mon–Sat, 8:30 AM – 5:00 PM
+                </div>
+            </div>
+            <div class="footer-links">
+                <span class="chip">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M7 7h10v10H7V7Z" stroke="#F97316" stroke-width="2"/>
+                        <path d="M4 10V4h6" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Book an Exam
+                </span>
+                <span class="chip">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 12s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6Z" stroke="#F97316" stroke-width="2"/>
+                        <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="#F97316" stroke-width="2"/>
+                    </svg>
+                    Vision First
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
